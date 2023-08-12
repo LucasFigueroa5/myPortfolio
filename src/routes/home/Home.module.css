@@ -1,0 +1,14 @@
+.homeContainer {
+    min-height: 100vh;
+    width: 100%;
+}
+.lucas {
+    position: absolute;
+    bottom: 0;
+}
+
+.title {
+    margin-left: 25px;
+    font-size: xxx-large;
+    margin-top: 5px;
+}
