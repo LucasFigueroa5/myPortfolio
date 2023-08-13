@@ -2,30 +2,23 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Collapse, initTE } from "tw-elements";
+import firma from "../../assets/images/firma2.png";
+import style from "./Navigation.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navigation = () => {
   useEffect(() => {
     initTE({ Collapse });
   }, []);
 
-  console.log("estas en navegacion");
   return (
-    <div>
-      {/* <!-- Main navigation container --> */}
+    <div className={style.maxContainer}>
       <nav
-        className="relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4"
+        className={`${style.navContainer} relative flex w-full flex-nowrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:flex-wrap lg:justify-start lg:py-4`}
         data-te-navbar-ref
       >
         <div className="flex w-full flex-wrap items-center justify-between px-3">
-          <div className="ml-2">
-            <a
-              className="text-xl text-neutral-800 dark:text-neutral-200"
-              href="#"
-            >
-              Lucas
-            </a>
-          </div>
-          {/* <!-- Hamburger button for mobile view --> */}
           <button
             className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
             type="button"
@@ -35,7 +28,6 @@ const Navigation = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            {/* <!-- Hamburger icon --> */}
             <span className="[&>svg]:w-7">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,18 +44,15 @@ const Navigation = () => {
             </span>
           </button>
 
-          {/* <!-- Collapsible navbar container --> */}
           <div
             className="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
             id="navbarSupportedContent2"
             data-te-collapse-item
           >
-            {/* <!-- Left links --> */}
             <ul
               className="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
               data-te-navbar-nav-ref
             >
-              {/* <!-- Home link --> */}
               <li
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
@@ -82,7 +71,7 @@ const Navigation = () => {
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
               >
-                 <Link
+                <Link
                   to={"/about"}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                   aria-current="page"
@@ -110,7 +99,7 @@ const Navigation = () => {
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
               >
-                 <Link
+                <Link
                   to={"/skills"}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                   aria-current="page"
@@ -123,21 +112,16 @@ const Navigation = () => {
             </ul>
           </div>
         </div>
+        <div className={`${style.socialBtns} px-3`}>
+          <a href="https://github.com/LucasFigueroa5" target="blank">
+            <FontAwesomeIcon icon={faSquareGithub} className={style.github} />
+          </a>
+          <a href="https://www.linkedin.com/in/lucas-figueroa-62b6b4205/" target="blank">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </div>
       </nav>
-      {/* <div id="detail"> */}
-        <Outlet />
-      {/* </div> */}
-      {/* <ul>
-        <li>
-          <Link to={"/home"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"/about"}>About</Link>
-        </li>
-      </ul>
-      <div id="detail">
-        <Outlet />
-      </div> */}
+      <Outlet />
     </div>
   );
 };

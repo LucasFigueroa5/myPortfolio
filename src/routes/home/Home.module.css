@@ -9,6 +9,8 @@
 
 .title {
     margin-left: 25px;
-    font-size: xxx-large;
-    margin-top: 5px;
+    font-size: 2rem;
+    top: 45px;
+    width: 56%;
+    position: absolute;
 }
