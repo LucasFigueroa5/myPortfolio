@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
+import { Link } from "react-scroll";
 import { Collapse, initTE } from "tw-elements";
 import firma from "../../assets/images/firma2.png";
 import style from "./Navigation.module.css";
@@ -8,6 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navigation = () => {
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(prevClick => !prevClick); // Toggle the click state
+
+  const closeMenu = () => setClick(false); // Function to close the menu
 
   useEffect(() => {
     initTE({ Collapse });
@@ -61,11 +66,13 @@ const Navigation = () => {
                 data-te-nav-item-ref
               >
                 <Link
-                  to={"/home"}
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  onClick={closeMenu}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                  aria-current="page"
-                  href="#"
-                  data-te-nav-link-ref
                 >
                   Home
                 </Link>
@@ -75,11 +82,13 @@ const Navigation = () => {
                 data-te-nav-item-ref
               >
                 <Link
-                  to={"/about"}
-                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                  aria-current="page"
-                  href="#"
-                  data-te-nav-link-ref
+                   to="about"
+                   spy={true}
+                   smooth={true}
+                   offset={0}
+                   duration={500}
+                   onClick={closeMenu}
+                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   About Me
                 </Link>
@@ -89,11 +98,13 @@ const Navigation = () => {
                 data-te-nav-item-ref
               >
                 <Link
-                  to={"/proyects"}
+                  to="proyects"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  onClick={closeMenu}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                  aria-current="page"
-                  href="#"
-                  data-te-nav-link-ref
                 >
                   Proyects
                 </Link>
@@ -103,13 +114,31 @@ const Navigation = () => {
                 data-te-nav-item-ref
               >
                 <Link
-                  to={"/skills"}
+                  to="skills"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  onClick={closeMenu}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-                  aria-current="page"
-                  href="#"
-                  data-te-nav-link-ref
                 >
                   Skills
+                </Link>
+              </li>
+              <li
+                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                data-te-nav-item-ref
+              >
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  onClick={closeMenu}
+                  className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -124,7 +153,6 @@ const Navigation = () => {
           </a>
         </div>
       </nav>
-      <Outlet />
     </div>
   );
 };

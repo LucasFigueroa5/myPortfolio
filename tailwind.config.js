@@ -11,6 +11,8 @@ export default {
   darkMode: "class",
   plugins: [
     require("tw-elements/dist/plugin.cjs"),
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 }
