@@ -13,9 +13,7 @@ const Home = () => {
           onInit={(typewriter) => {
             typewriter
             .typeString("I'm ")
-            .typeString(
-              '<span style="color: #995869; font-size: 46px;">Lucas Figueroa</span>'
-              )
+            .typeString(`<span class="${style.span}" style="color: #995869;">Lucas Figueroa</span>`)
             .typeString(", full stack developer...")
             .start();
           }}

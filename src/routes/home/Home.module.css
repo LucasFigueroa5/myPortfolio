@@ -2,15 +2,49 @@
     min-height: 100vh;
     width: 100%;
 }
+
 .lucas {
     position: absolute;
     bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 .title {
     margin-left: 25px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     top: 45px;
     width: 56%;
     position: absolute;
+}
+
+@media (max-height: 700px) {
+    .lucas {
+        width: 80%;
+    }
+
+    .title {
+        width: 60%;
+        position: absolute;
+        top: 70px;
+        left: 10px;
+    }
+
+    .span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para teléfonos */
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos específicos para tablets */
+}
+
+/* Media query para pantallas grandes (PC) */
+@media (min-width: 1025px) {
+    /* Estilos específicos para PC */
 }
