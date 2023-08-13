@@ -10,9 +10,13 @@
     width: 100%;
 }
 
+.span {
+    font-size: 46px;
+}
+
 .title {
     margin-left: 25px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     top: 45px;
     width: 56%;
     position: absolute;
@@ -24,6 +28,7 @@
     }
 
     .title {
+        font-size: 1.5rem;
         width: 60%;
         position: absolute;
         top: 70px;
