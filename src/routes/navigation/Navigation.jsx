@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Collapse, initTE } from "tw-elements";
@@ -8,9 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navigation = () => {
+
   useEffect(() => {
     initTE({ Collapse });
   }, []);
+
+
 
   return (
     <div className={style.maxContainer}>
@@ -25,7 +28,7 @@ const Navigation = () => {
             data-te-collapse-init
             data-te-target="#navbarSupportedContent2"
             aria-controls="navbarSupportedContent2"
-            aria-expanded="false"
+            aria-expanded='false'
             aria-label="Toggle navigation"
           >
             <span className="[&>svg]:w-7">
