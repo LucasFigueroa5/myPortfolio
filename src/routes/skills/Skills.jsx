@@ -1,8 +1,9 @@
 import React from 'react'
+import style from './Skills.module.css'
 
 const Skills = () => {
   return (
-    <div id='skills'>Skills</div>
+    <div className={style.skillsContainer} id='skills'>Skills</div>
   )
 }
 

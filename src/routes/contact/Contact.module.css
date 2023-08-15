@@ -1,0 +1,32 @@
+.contactContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.input {
+    max-width: 190px;
+    height: 50px;
+    border: 2px solid transparent;
+    outline: none;
+    border-bottom: 2px solid #3f3f3f;
+    padding: 5px;
+    transition: .5s linear;
+    letter-spacing: 1px;
+  }
+  
+  .input:focus {
+    border: 2px solid #995869;
+    caret-color: #995869;
+    color: #995869;
+    box-shadow: 4px 4px 10px #070707;
+  }
+  
+  .input:focus::placeholder {
+    color: #995869;
+  }
+
+  .msg {
+    height: 200px;
+  }

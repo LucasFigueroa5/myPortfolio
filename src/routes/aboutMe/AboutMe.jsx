@@ -7,9 +7,9 @@ const AboutMe = () => {
     <div className={style.aboutContainer} id="about">
       <h1>About Me</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius vero labore tempore! Veritatis suscipit quas adipisci officia corporis est consequatur, qui numquam? Placeat ab a laborum debitis doloribus. Obcaecati, rerum?</p>
-      <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+      <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
         <svg
-          class="fill-current w-4 h-4 mr-2"
+          className="fill-current w-4 h-4 mr-2"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >

@@ -5,7 +5,6 @@ import style from "./Home.module.css";
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
-  console.log("esto es home");
   return (
     <div className={style.homeContainer} id="home">
       <h1 className={style.title}>

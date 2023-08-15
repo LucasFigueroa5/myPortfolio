@@ -19,6 +19,12 @@ const Navigation = () => {
   }, []);
 
 
+  const handleOptionClick = () => {
+    const collapseElement = document.getElementById("navbarSupportedContent2"); // Get the collapsible element
+    const collapseInstance = Collapse.getInstance(collapseElement); // Get the Collapse instance
+
+    collapseInstance.hide(); // Hide the collapsible element
+  };
 
   return (
     <div className={style.maxContainer}>
@@ -44,9 +50,9 @@ const Navigation = () => {
                 className="h-7 w-7"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
             </span>
@@ -71,7 +77,7 @@ const Navigation = () => {
                   smooth={true}
                   offset={0}
                   duration={500}
-                  onClick={closeMenu}
+                  onClick={handleOptionClick}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   Home
@@ -87,7 +93,7 @@ const Navigation = () => {
                    smooth={true}
                    offset={0}
                    duration={500}
-                   onClick={closeMenu}
+                   onClick={handleOptionClick}
                    className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   About Me
@@ -103,7 +109,7 @@ const Navigation = () => {
                   smooth={true}
                   offset={0}
                   duration={500}
-                  onClick={closeMenu}
+                  onClick={handleOptionClick}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   Proyects
@@ -119,7 +125,7 @@ const Navigation = () => {
                   smooth={true}
                   offset={0}
                   duration={500}
-                  onClick={closeMenu}
+                  onClick={handleOptionClick}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   Skills
@@ -135,7 +141,7 @@ const Navigation = () => {
                   smooth={true}
                   offset={0}
                   duration={500}
-                  onClick={closeMenu}
+                  onClick={handleOptionClick}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
                   Contact
