@@ -21,10 +21,11 @@ const Navigation = () => {
 
   const handleOptionClick = () => {
     const collapseElement = document.getElementById("navbarSupportedContent2"); // Get the collapsible element
-    const collapseInstance = Collapse.getInstance(collapseElement); // Get the Collapse instance
-
-    collapseInstance.hide(); // Hide the collapsible element
+    const collapseInstance = Collapse.getInstance(collapseElement); 
+    if (collapseInstance) {
+      collapseInstance.hide();// Get the Collapse instance
   };
+};
 
   return (
     <div className={style.maxContainer}>
@@ -104,7 +105,7 @@ const Navigation = () => {
                 data-te-nav-item-ref
               >
                 <Link
-                  to="proyects"
+                  to="projects"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -112,7 +113,7 @@ const Navigation = () => {
                   onClick={handleOptionClick}
                   className="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
                 >
-                  Proyects
+                  Projects
                 </Link>
               </li>
               <li

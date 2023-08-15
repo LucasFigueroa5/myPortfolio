@@ -77,3 +77,19 @@
         width: 40%;
     }
 }
+@media (min-width: 1700px) {
+    .title {
+        font-size: 3rem;
+        width: 60%;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        transform: translateY(170%);
+    }
+    .lucas {
+        width: 35%;
+    }
+    .span {
+        font-size: 3.5rem;
+    }
+}
