@@ -22,3 +22,27 @@
 .github {
     margin-right: 10px;
 }
+
+@media (max-height: 700px) {
+  
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para teléfonos */
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navContainer {
+        flex-wrap: nowrap;
+    }
+    /* Estilos específicos para tablets */
+}
+
+/* Media query para pantallas grandes (PC) */
+@media (min-width: 1025px) {
+    .navContainer {
+        flex-wrap: nowrap;
+    }
+    /* Estilos específicos para PC */
+}
