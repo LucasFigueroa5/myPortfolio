@@ -21,6 +21,7 @@
     top: 66px;
     width: 60%;
     position: absolute;
+    z-index: 2;
 }
 
 @media (max-height: 700px) {
