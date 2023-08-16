@@ -11,6 +11,7 @@ const AboutMe = () => {
     // Crear un elemento <a> para descargar el archivo
     const a = document.createElement("a");
     a.href = url;
+    a.target = 'blank'
     a.download = "CV_Lucas_Figueroa_Fullstack.pdf"; // Nombre del archivo que se descargará
     a.click();
   };
