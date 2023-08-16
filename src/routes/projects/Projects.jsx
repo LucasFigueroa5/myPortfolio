@@ -7,7 +7,7 @@ const Projects = () => {
     <div id="projects" className={style.projectsContainer}>
       <div className={style.marginProjects}>
         <h1>
-          <span className={style.tags}>#</span>My Projects
+          <span className={style.tags}>#</span>Projects
         </h1>
         <Project />
       </div>
