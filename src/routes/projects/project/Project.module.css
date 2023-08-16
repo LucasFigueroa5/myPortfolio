@@ -6,6 +6,7 @@
     justify-content: flex-start;
     gap: 20px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .btnCard {
@@ -14,4 +15,10 @@
 
 .image {
     width: 100%;
+}
+
+.coming {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }

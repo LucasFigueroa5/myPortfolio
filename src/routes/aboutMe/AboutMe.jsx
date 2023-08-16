@@ -1,24 +1,18 @@
 import React from "react";
 import lucas from "../../assets/images/lucas.png";
 import style from "./AboutMe.module.css";
+import cvPdf from "../../assets/files/CV_Lucas_Figueroa_Fullstack.pdf";
 
 const AboutMe = () => {
-  const handleDownload = () => {
-    // Crear un objeto Blob con el contenido del archivo que deseas descargar
-    const fileContent = "Contenido del archivo que deseas descargar";
-    const blob = new Blob([fileContent], { type: "text/plain" });
-
-    // Crear una URL para el Blob
-    const url = window.URL.createObjectURL(blob);
+  const handleDownload = (e) => {
+    e.preventDefault()
+    const url = cvPdf;
 
     // Crear un elemento <a> para descargar el archivo
     const a = document.createElement("a");
     a.href = url;
-    a.download = "nombre-del-archivo.txt"; // Nombre del archivo que se descargará
+    a.download = "CV_Lucas_Figueroa_Fullstack.pdf"; // Nombre del archivo que se descargará
     a.click();
-
-    // Liberar la URL del Blob
-    window.URL.revokeObjectURL(url);
   };
   return (
     <div className={style.aboutContainer} id="about">
@@ -36,7 +30,7 @@ const AboutMe = () => {
           and forging meaningful bonds.
         </p>
         <span className={style.spanCV}>You can download my CV here!</span>
-        <a href="../../assets/files/CAB Dinner Menu 11x17in may23.pdf" download>
+        <a href="../../assets/files/CV_Lucas_Figueroa_Fullstack.pdf" download>
           <button
             onClick={handleDownload}
             className={`${style.btnDownload} bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center`}

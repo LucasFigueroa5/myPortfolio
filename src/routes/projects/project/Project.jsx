@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import { Modal, Ripple, initTE } from "tw-elements";
-import style from './Project.module.css'
-import pokemon from '../../../assets/images/pokemons.jpg'
-import monos from '../../../assets/images/monos.jpg'
-import pod from '../../../assets/images/podcasts.jpg'
+import style from "./Project.module.css";
+import pokemon from "../../../assets/images/pokemons.jpg";
+import monos from "../../../assets/images/monos.jpg";
+import pod from "../../../assets/images/podcasts.jpg";
+import Typewriter from "typewriter-effect";
+
 const Project = () => {
   let projects = [
     {
@@ -27,12 +29,9 @@ const Project = () => {
       description:
         "This is my first static app, it's made solely with HTML and CSS. It's about podcasts imported from Spotify...",
     },
-   
   ];
 
-  
-  
-  console.log(projects)
+  console.log(projects);
 
   useEffect(() => {
     initTE({ Modal, Ripple });
@@ -41,7 +40,6 @@ const Project = () => {
   return (
     <div className={style.cardsContainer}>
       {projects.map((proy, index) => (
-        
         <div key={proy.name}>
           <button
             type="button"
@@ -76,7 +74,7 @@ const Project = () => {
                   >
                     {proy.name}
                   </h5>
-                 
+
                   <button
                     type="button"
                     className="box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
@@ -106,7 +104,7 @@ const Project = () => {
                 </div>
                 {/* Modal footer */}
                 <div className="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
-                  <a href={proy.url}>
+                  <a href={proy.url} target="blank">
                     <button
                       type="button"
                       className={` ${style.btnCard} ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]`}
@@ -122,6 +120,21 @@ const Project = () => {
           </div>
         </div>
       ))}
+      <div className={style.coming}>
+        <h4>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+            .typeString("function ")
+            .typeString(`<span class="${style.span}" style="color: #995869;">projects() {</span><br />`)
+            .typeString('return "More projects coming soon!";<br />')
+            .typeString('};')
+            .start();
+          }}
+        />
+        </h4>
+
+      </div>
     </div>
   );
 };

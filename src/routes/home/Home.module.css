@@ -7,7 +7,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: auto;
+    height: 60%;
 }
 
 .span {
@@ -15,21 +16,21 @@
 }
 
 .title {
-    margin-left: 25px;
-    font-size: 2rem;
-    top: 45px;
-    width: 56%;
+    margin-left: 30px;
+    font-size: 2.2rem;
+    top: 66px;
+    width: 60%;
     position: absolute;
 }
 
 @media (max-height: 700px) {
     .lucas {
-        width: 80%;
+        height: 80%;
     }
 
     .title {
-        font-size: 1.5rem;
-        width: 60%;
+        font-size: 1.8rem;
+        width: 63%;
         position: absolute;
         top: 70px;
         left: 10px;
@@ -41,20 +42,23 @@
 }
 
 @media (max-width: 768px) {
-    /* Estilos específicos para teléfonos */
+    .lucas {
+        height: 60%;
+    }
 }
 
 /* Media query para pantallas medianas (tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .lucas {
-        width: 40%;
+        height: 70%;
     }
+
     .title {
-        font-size: 2.5rem;
-        width: 60%;
+        font-size: 3.5rem;
+        width: 80%;
         position: absolute;
-        top: 0px;
-        left: 10px;
+        top: -341px;
+        left: 35px;
         transform: translateY(170%);
     }
 
@@ -73,10 +77,12 @@
         left: 10px;
         transform: translateY(170%);
     }
+
     .lucas {
-        width: 40%;
+        height: 90%;
     }
 }
+
 @media (min-width: 1700px) {
     .title {
         font-size: 3rem;
@@ -86,9 +92,11 @@
         left: 10px;
         transform: translateY(170%);
     }
+
     .lucas {
-        width: 35%;
+        height: 90%;
     }
+
     .span {
         font-size: 3.5rem;
     }
