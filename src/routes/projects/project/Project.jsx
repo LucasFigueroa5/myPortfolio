@@ -31,7 +31,6 @@ const Project = () => {
     },
   ];
 
-  console.log(projects);
 
   useEffect(() => {
     initTE({ Modal, Ripple });

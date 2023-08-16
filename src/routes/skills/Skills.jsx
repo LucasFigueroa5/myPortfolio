@@ -68,7 +68,7 @@ const Skills = () => {
           {softSkills &&
             softSkills.map((skill, index) => {
               return (
-                <div className={style.skillContainer}>
+                <div key={index} className={style.skillContainer}>
                   <h4>{skill}</h4>
                 </div>
               );
@@ -79,7 +79,7 @@ const Skills = () => {
           {techSkills &&
             techSkills.map((skill, index) => {
               return (
-                <div className={style.techSkill}>
+                <div key={index} className={style.techSkill}>
                   <img src={skill.image} alt={skill.name} />
                   <h4>{skill.name}</h4>
                 </div>
