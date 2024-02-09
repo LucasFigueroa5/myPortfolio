@@ -20,7 +20,9 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  width: 100%;
+  width: 130%;
+  max-height: 320px;
+
 }
 .input {
    width: 100%;
@@ -90,10 +92,10 @@
 
 @media (min-width: 1700px) {
   .inputs {
-    scale: 1.5;
-    width: 135%;
+    width: 190%;
     position: relative;
     top: -40px;
+    font-size: 1.5rem;
   }
     
 }
