@@ -24,6 +24,12 @@
     margin-right: 10px;
 }
 
+.navbtn {
+    cursor: pointer !important;
+    font-size: 30px;
+    color: rebeccapurple;
+}
+
 @media (max-height: 700px) {
   
 }

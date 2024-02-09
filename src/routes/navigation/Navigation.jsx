@@ -69,8 +69,9 @@ const Navigation = () => {
               data-te-navbar-nav-ref
             >
               <li
-                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1 navbtn"
                 data-te-nav-item-ref
+                style={{ cursor: 'pointer' }}                
               >
                 <Link
                   to="home"
@@ -87,6 +88,7 @@ const Navigation = () => {
               <li
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
+                style={{ cursor: 'pointer' }}
               >
                 <Link
                    to="about"
@@ -103,6 +105,7 @@ const Navigation = () => {
               <li
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
+                style={{ cursor: 'pointer' }}
               >
                 <Link
                   to="projects"
@@ -119,6 +122,7 @@ const Navigation = () => {
               <li
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
+                style={{ cursor: 'pointer' }}
               >
                 <Link
                   to="skills"
@@ -135,6 +139,7 @@ const Navigation = () => {
               <li
                 className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
                 data-te-nav-item-ref
+                style={{ cursor: 'pointer' }}
               >
                 <Link
                   to="contact"

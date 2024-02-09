@@ -5,11 +5,22 @@
     flex-direction: column;
     align-items: center;
 }
+
+.marginContact {
+  height: 100vh;
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
 .inputs {
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  width: 100%;
 }
 .input {
    width: 100%;
@@ -57,4 +68,32 @@
     font-size: 3.5rem;
     font-weight: bold;
     color: #995869;
+}
+
+
+@media (max-height: 700px) {
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* Media query para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+
+/* Media query para pantallas grandes (PC) */
+@media (min-width: 1025px) {
+
+}
+
+@media (min-width: 1700px) {
+  .inputs {
+    scale: 1.5;
+    width: 135%;
+    position: relative;
+    top: -40px;
+  }
+    
 }

@@ -1,53 +1,52 @@
 import React from "react";
 import style from "./Skills.module.css";
-import js from '../../assets/images/techskills/js.png'
-import reactjs from '../../assets/images/techskills/react.png'
-import next from '../../assets/images/techskills/next.png'
-import redux from '../../assets/images/techskills/redux.png'
-import sequelize from '../../assets/images/techskills/sequelize.png'
-import express from '../../assets/images/techskills/express.png'
-import postgresql from '../../assets/images/techskills/postgresql.png'
-import node from '../../assets/images/techskills/node.png'
+import js from "../../assets/images/techskills/js.png";
+import reactjs from "../../assets/images/techskills/react.png";
+import next from "../../assets/images/techskills/next.png";
+import redux from "../../assets/images/techskills/redux.png";
+import sequelize from "../../assets/images/techskills/sequelize.png";
+import express from "../../assets/images/techskills/express.png";
+import postgresql from "../../assets/images/techskills/postgresql.png";
+import node from "../../assets/images/techskills/node.png";
 
 const Skills = () => {
   let techSkills = [
     {
-      name: 'JavaScript',
+      name: "JavaScript",
       image: js,
     },
     {
-      name: 'ReactJs',
+      name: "ReactJs",
       image: reactjs,
     },
     {
-      name: 'Redux',
+      name: "Redux",
       image: redux,
     },
     {
-      name: 'NextJs',
+      name: "NextJs",
       image: next,
     },
     {
-      name: 'Tailwind',
+      name: "Tailwind",
       image: js,
     },
     {
-      name: 'PostgreSQL',
+      name: "PostgreSQL",
       image: postgresql,
     },
     {
-      name: 'ExpressJs',
+      name: "ExpressJs",
       image: express,
     },
     {
-      name: 'Sequelize',
+      name: "Sequelize",
       image: sequelize,
     },
     {
-      name: 'NodeJs',
+      name: "NodeJs",
       image: node,
     },
-    
   ];
   let softSkills = [
     "Adaptability",
@@ -63,28 +62,32 @@ const Skills = () => {
         <h1>
           <span className={style.tags}>#</span>Skills
         </h1>
-        <h3>Soft Skills</h3>
-        <div className={style.skillsFlex}>
-          {softSkills &&
-            softSkills.map((skill, index) => {
-              return (
-                <div key={index} className={style.skillContainer}>
-                  <h4>{skill}</h4>
-                </div>
-              );
-            })}
+        <div className={style.softSkills}>
+          <h3>Soft Skills</h3>
+          <div className={style.skillsFlex}>
+            {softSkills &&
+              softSkills.map((skill, index) => {
+                return (
+                  <div key={index} className={style.skillContainer}>
+                    <h4>{skill}</h4>
+                  </div>
+                );
+              })}
+          </div>
         </div>
-        <h3>Tech Skills</h3>
-        <div className={style.techSkillsFlex}>
-          {techSkills &&
-            techSkills.map((skill, index) => {
-              return (
-                <div key={index} className={style.techSkill}>
-                  <img src={skill.image} alt={skill.name} />
-                  <h4>{skill.name}</h4>
-                </div>
-              );
-            })}
+        <div className={style.techSkills}>
+          <h3>Tech Skills</h3>
+          <div className={style.techSkillsFlex}>
+            {techSkills &&
+              techSkills.map((skill, index) => {
+                return (
+                  <div key={index} className={style.techSkill}>
+                    <img src={skill.image} alt={skill.name} />
+                    <h4>{skill.name}</h4>
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </div>
     </div>
