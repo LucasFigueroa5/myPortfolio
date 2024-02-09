@@ -54,3 +54,13 @@
     }
     /* Estilos específicos para PC */
 }
+
+@media (min-width: 1700px) {
+    .navContainer {
+        flex-wrap: nowrap;
+    }
+    .socialBtns {
+        display: flex;
+        font-size: 2rem;
+    }
+}
