@@ -62,31 +62,33 @@ const Skills = () => {
         <h1>
           <span className={style.tags}>#</span>Skills
         </h1>
-        <div className={style.softSkills}>
-          <h3>Soft Skills</h3>
-          <div className={style.skillsFlex}>
-            {softSkills &&
-              softSkills.map((skill, index) => {
-                return (
-                  <div key={index} className={style.skillContainer}>
-                    <h4>{skill}</h4>
-                  </div>
-                );
-              })}
+        <div className={style.allSkills}>
+          <div className={style.softSkills}>
+            <h3>Soft Skills</h3>
+            <div className={style.skillsFlex}>
+              {softSkills &&
+                softSkills.map((skill, index) => {
+                  return (
+                    <div key={index} className={style.skillContainer}>
+                      <h4>{skill}</h4>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-        </div>
-        <div className={style.techSkills}>
-          <h3>Tech Skills</h3>
-          <div className={style.techSkillsFlex}>
-            {techSkills &&
-              techSkills.map((skill, index) => {
-                return (
-                  <div key={index} className={style.techSkill}>
-                    <img src={skill.image} alt={skill.name} />
-                    <h4>{skill.name}</h4>
-                  </div>
-                );
-              })}
+          <div className={style.techSkills}>
+            <h3>Tech Skills</h3>
+            <div className={style.techSkillsFlex}>
+              {techSkills &&
+                techSkills.map((skill, index) => {
+                  return (
+                    <div key={index} className={style.techSkill}>
+                      <img src={skill.image} alt={skill.name} />
+                      <h4>{skill.name}</h4>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
       </div>

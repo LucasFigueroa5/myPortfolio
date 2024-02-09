@@ -72,6 +72,11 @@
     justify-content: center;
  
 }
+.allSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 @media (max-height: 700px) {
 }
@@ -87,23 +92,17 @@
 
 /* Media query para pantallas grandes (PC) */
 @media (min-width: 1025px) {
-    .techSkills {
-        max-width: 35%;
-        scale: 1.5;
-    }
-    .softSkills {
-        max-width: 35%;
-        scale: 1.5;
-    }
+ 
 }
 
 @media (min-width: 1700px) {
     .techSkills {
-        max-width: 35%;
-        scale: 1.5;
     }
     .softSkills {
-        max-width: 35%;
+    }
+    .allSkills {
+        height: 35%;
         scale: 1.5;
+        width: 35%;
     }
 }
